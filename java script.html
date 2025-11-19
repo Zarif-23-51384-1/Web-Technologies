@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script>
+         function handleSubmit() {
+            const NameValue = document.getElementById("name").value;
+            const passwordValue = document.getElementById("password").value;
+            if (!NameValue || NameValue == "") {
+                const ErrorElement = document.getElementById("nameErr");
+                ErrorElement.innerHTML = "Name is required";
+            } else {
+                const ErrorElement = document.getElementById("nameErr");
+                ErrorElement.innerHTML = "";
+            }
+            if (!passwordValue || passwordValue == "") {
+                const ErrorElement = document.getElementById("passwordErr");
+                ErrorElement.innerHTML = "Password is required";
+            } else {
+                const ErrorElement = document.getElementById("passwordErr");
+                ErrorElement.innerHTML = "";
+            }
+        }
+    </script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main{
+            width: 80%;
+            margin: auto;
+            border: 2px solid black;
+        }
+        .header{
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        .header img{
+            width: 120px;
+        }
+        .nav{
+            float: right;
+        }
+        .nav a{
+            margin-left: 10px;
+        }
+        .content{
+            height: 360px;
+            text-align: center;
+        }
+        .login-box{
+            width: 400px;
+            border: 1px solid gray;
+            margin: 50px auto;
+            padding: 15px;
+            text-align: left;
+        }
+        footer{
+            border-top: 2px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="header">
+        <table width="100%">
+            <tr>
+                <td>
+                    <h2><span style="color: forestgreen; font-size: 40px; font-style: italic; font-weight: bolder;">X</span>company</h2>
+                </td>
+                <td align="right">
+                    <a href="#">Home</a> | <a href="#">Login</a> | <a href="#">Signup</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content">
+
+        <div class="login-box">
+            <b>LOGIN</b>
+            <br><br>
+            User Name : <input type="text" placeholder="Enter your name" id="name"><br><br>
+            <p id="nameErr" style="color:red"></p>
+            Password &nbsp;&nbsp;: <input type="password" placeholder="Enter your password" id="password"><br><br>
+            <p id="passwordErr" style="color:red"></p>
+
+            <hr>
+
+            <input type="checkbox"> Remember Me <br><br>
+            <button onclick="handleSubmit()">Submit</button>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+
+    <footer>
+        Copyright © 2017
+    </footer>
+
+</div>
+
+</body>
+</html>

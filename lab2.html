@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>Login - XCompany</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid black;
+            width: 60%;
+            margin: 50px auto; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header td {
+            border-bottom: 1px solid black;
+        }
+
+        .footer td {
+            border-top: 1px solid black;
+            text-align: center;
+            font-size: small;
+        }
+
+        .nav {
+            text-align: right;
+        }
+
+        a {
+            color: purple;
+            text-decoration: underline; 
+        }
+
+        .login-box {
+            border: 1px solid black;
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 3px 8px;
+            cursor: pointer;
+        }
+
+        .logo {
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: green;
+            font-weight: bold;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <table border="1">
+        <tr class="header">
+            <td class="logo"><span>X</span>Company</td>
+            <td class="nav">
+                <a href="#">Home</a> | <a href="#">Login</a> | <a href="#">Registration</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <table class="login-box">
+                    <tr><td colspan="2"><b>LOGIN</b></td></tr>
+                    <tr>
+                        <td>User Name :</td>
+                        <td><input type="text" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox"> Remember Me
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">Submit</button></td>
+                        <td><a href="#">Forgot Password?</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="footer">
+            <td colspan="2">Copyright © 2017</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
