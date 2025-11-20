@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Global Tech Connect — Event Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Global Tech Connect</h1>
+      <p class="lead">Event Registration</p>
+    </header>
+
+    <section class="form-section">
+      <form id="registrationForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input id="fullName" name="fullName" type="text" minlength="6" maxlength="100" required />
+          <div class="error" id="nameError" aria-live="polite"></div>
+        </div>
+
+        <div class="field">
+          <label for="email">Professional Email <span class="required">*</span></label>
+          <input id="email" name="email" type="email" required />
+          <div class="error" id="emailError" aria-live="polite"></div>
+        </div>
+
+        <div class="field">
+          <label for="company">Company / Institution <span class="optional">(optional)</span></label>
+          <input id="company" name="company" type="text" maxlength="100" />
+          <div class="error" id="companyError" aria-live="polite"></div>
+        </div>
+
+        <fieldset class="field radio-group" id="attendanceField">
+          <legend>Attendance Type <span class="required">*</span></legend>
+          <label><input type="radio" name="attendance" value="Virtual" /> Virtual</label>
+          <label><input type="radio" name="attendance" value="In-Person" /> In-Person</label>
+          <div class="error" id="attendanceError" aria-live="polite"></div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Register</button>
+          <button type="button" id="analyticsToggle" class="btn secondary">Show Event Analytics</button>
+        </div>
+
+        <div id="formMessage" class="message" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <aside id="analyticsPanel" class="analytics hidden" aria-hidden="true">
+      <h2>Event Analytics</h2>
+      <p><strong>Total Registrants:</strong> <span id="totalCount">0</span></p>
+      <p><strong>Attendance Breakdown:</strong></p>
+      <ul>
+        <li>Virtual: <span id="virtualCount">0</span></li>
+        <li>In-Person: <span id="inpersonCount">0</span></li>
+      </ul>
+    </aside>
+
+    <footer class="notes">
+      <p><strong>Note:</strong> All data is kept in JavaScript arrays during your browsing session (no database or localStorage used).</p>
+      <p>Reference images you uploaded (for instructor):</p>
+      <ul>
+        <li><a href="full_campus_view_from_stadium.jpg" target="_blank">AIUB CAMPUS VIEW</a></li>
+        <li><a href="gettyimages-1061013668-170667a.jpg" target="_blank">National Flag</a></li>
+      </ul>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
